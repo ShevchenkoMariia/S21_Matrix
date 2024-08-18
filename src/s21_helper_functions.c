@@ -20,7 +20,8 @@ int correct_pointer(matrix_t *pointer) {
 // Проверяем, что из данной структуры можно создать новую матрицу
 int correct_structure(matrix_t *structure) {
   int check = correct_pointer(structure);
-  return (check && structure->rows > 0 && structure->columns > 0) ? SUCCESS : FAILURE;
+  return (check && structure->rows > 0 && structure->columns > 0) ? SUCCESS
+                                                                  : FAILURE;
 }
 
 // Проверяем, что в данной матрице все значения корректные и с ней можно
