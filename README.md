@@ -2,15 +2,26 @@
 
 Implementation of the matrix.h library.
 
+The experience gained as a result of the project:
+- implementation of a static library for working with matrices in C;
+- development and optimization of algorithms for performing operations on matrices (addition, multiplication, transposition, etc.);
+- dynamic memory management in C, including allocation and release of memory for matrices;
+- writing unit tests for functions using the Check library;
+- debugging the code using tests to ensure the library is working correctly;
+- application of mathematical concepts in programming;
+- using Git;
+- compliance with C11 standards and principles of structured programming, including the use of Google Style for writing code;
+- configure a Makefile to automate library and test builds, including targets for the gcov report in HTML format.
+
 The russian version of the task can be found in the repository.
 
 ## Contents
 
-1. [Chapter I](#chapter-i)   
+1. [Chapter I](#chapter-i)  
    1.1. [Introduction](#introduction)
-2. [Chapter II](#chapter-ii)   
+2. [Chapter II](#chapter-ii)  
    2.1. [Information](#information)
-3. [Chapter III](#chapter-iii)   
+3. [Chapter III](#chapter-iii)  
    3.1. [Part 1](#part-1-implementation-of-the-matrixh-library-functions)
 
 # Chapter I
@@ -25,9 +36,9 @@ In this project, you will implement your own library for processing numerical ma
 
 ### Historical Background
 
-The first mentions of matrices (or as they were then called: "magic squares") were found in ancient China.   
-They became famous in the middle of the 18th century thanks to the work of the famous mathematician Gabriel Cramer, who published his work "Introduction to the Analysis of Algebraic Curves", which described a fundamentally new algorithm for solving systems of linear equations.   
-Soon after, the works of Carl Friedrich Gauss on the "classical" method of solving linear equations, the Cayley-Hamilton theorem, the works of Karl Weierstrass, Georg Frobenius, and other outstanding scientists were published.   
+The first mentions of matrices (or as they were then called: "magic squares") were found in ancient China.  
+They became famous in the middle of the 18th century thanks to the work of the famous mathematician Gabriel Cramer, who published his work "Introduction to the Analysis of Algebraic Curves", which described a fundamentally new algorithm for solving systems of linear equations.  
+Soon after, the works of Carl Friedrich Gauss on the "classical" method of solving linear equations, the Cayley-Hamilton theorem, the works of Karl Weierstrass, Georg Frobenius, and other outstanding scientists were published.  
 It was not until 1850 that James Joseph Sylvester introduced the term "matrix" in his work.
 
 ## Matrix
@@ -59,9 +70,9 @@ A = (2,1) (2,2) (2,3)
     (3,1) (3,2) (3,3)
 ```
 
-The order of a matrix is the number of its rows or columns.   
-The main diagonal of a square matrix is the diagonal from the upper left to the lower right corner.   
-A rectangular matrix (B) is a matrix with the number of rows not equal to the number of columns.   
+The order of a matrix is the number of its rows or columns.  
+The main diagonal of a square matrix is the diagonal from the upper left to the lower right corner.  
+A rectangular matrix (B) is a matrix with the number of rows not equal to the number of columns.  
 A square matrix (A) is a matrix with the number of rows equal to the number of columns.
 
 A column matrix is a matrix with only one column:
@@ -80,7 +91,7 @@ A = (1,1) (1,2) (1,m)
 
 Tip: A column matrix and a row matrix are also often called vectors.
 
-A diagonal matrix is a square matrix in which all elements outside the main diagonal are zero.   
+A diagonal matrix is a square matrix in which all elements outside the main diagonal are zero.  
 An identity matrix is a diagonal matrix with all diagonal elements equal to one:
 
 ```sh
@@ -257,7 +268,7 @@ M. =  4 -14   8
 int s21_determinant(matrix_t *A, double *result);
 ```
 
-The determinant is a number that is associated to each square matrix and calculated from the elements using special formulas.   
+The determinant is a number that is associated to each square matrix and calculated from the elements using special formulas.  
 Tip: The determinant can only be calculated for a square matrix.
 
 The determinant of a matrix equals the sum of the products of elements of the row (column) and the corresponding algebraic complements.
